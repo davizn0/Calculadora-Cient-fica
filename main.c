@@ -1,25 +1,25 @@
 #include <stdio.h>
-#include <math.h>
+#include <math.h> // Inclusão da biblioteca para funções matemáticas.
 
 int main() {
-	printf("-----CALCULADORA CIENTÍFICA-----\n");
+	printf("-----CALCULADORA CIENTÍFICA-----\n"); // Exibe o título da calculadora.
 
-	double n1, n2, n3, area;
-	int opcao, operacao, numint, i, fatorial;
-	const double PI_CONST = 3.1415926535;
+	double n1, n2, n3, area; // Declarações de varíaveis do tipo double (decimal com precisão dupla).
+	int opcao, operacao, numint, i, fatorial; // Declarações de varíaveis do tipo inteiro.
+	const double PI_CONST = 3.1415926535; // Declaração de uma constante PI.
 
-    do {
-        // Menu Principal
+    do { // Início do loop que mostra o menu principal.
+        // Menu Principal.
         printf("\n(1) para operações com 1 número.\n");
         printf("(2) para operações com 2 números.\n");
         printf("(3) para operações com 3 números.\n");
         printf("(0) para sair.\n");
         printf("\nEscolha: ");
-        scanf(" %d", &opcao);
+        scanf(" %d", &opcao); // Recebe a escolha do usuário para quantos números ele vai utilizar na operação.
         
-        switch (opcao) {
-            //Submenu 1 número
-            case 1:
+        switch (opcao) { // Dependendo da escolha do usuário, entre no respectivo submenu.
+            //Submenu com 1 número.
+            case 1: // Opções de operações com 1 número.
                 printf("\n---Operações com 1 número---\n");
                 printf("\n(1) Raiz Quadrada\n");
                 printf("(2) Fatorial\n");
@@ -31,7 +31,7 @@ int main() {
                 printf("(8) Área do círculo de acordo com o raio\n");
                 printf("(9) Volume do cubo\n");
                 printf("\nEscolha: ");
-                scanf(" %d", &operacao);
+                scanf(" %d", &operacao); // Recebe a escolha da operação.
                 
                 switch (operacao) {
                     case 1:
@@ -40,27 +40,27 @@ int main() {
                         if (n1 < 0) {
                             printf("\nErro! Não há raiz quadrada real de número negativo!\n");
                         } else {
-                        printf("\nO resultado é %.2lf\n", sqrt(n1)); //calcula sqrt() e mostra o resultado.
+                        printf("\nO resultado é %.2lf\n", sqrt(n1)); // sqrt() calcula a raiz quadrada.
                         }
                         break;
                     case 2:
                         printf("\nDigite um número inteiro: ");
                         scanf(" %d", &numint);
-                        fatorial = 1;
-                        for (i = 1; i <= numint; i++) {
-                            fatorial *= i;
+                        fatorial = 1; // Inicializa a váriavel fatorial.
+                        for (i = 1; i <= numint; i++) { // Calcula de forma interativa.
+                            fatorial *= i; // É o mesmo que fatorial = fatorial * i.
                         }
                         printf("\nO resultado é %d\n", fatorial);
                         break;
                     case 3:
                         printf("\nDigite um número: ");
                         scanf(" %lf", &n1);
-                        printf("\nO resultado é %.2lf\n", (n1 < 0 ? -n1 : n1));
+                        printf("\nO resultado é %.2lf\n", (n1 < 0 ? -n1 : n1)); // Expressão condicional, se for negativo (verdadeiro) o numero é multiplicado, se for porsitivo (falso) ele retorna sem alterações.
                         break;
                     case 4:
                         printf("\nDigite um número inteiro: ");
                         scanf(" %d", &numint);
-                        if (numint % 2 == 0) {
+                        if (numint % 2 == 0) { // % calcula o resto da divisão, se for igual a 0 é par.
                             printf("\n%d É um número par.\n", numint);    
                         } else {
                             printf("\n%d Não é um número par.\n", numint);
@@ -101,8 +101,8 @@ int main() {
                         break;
                 }
             break;
-            //Submenu 2 números
-            case 2:
+            //Submenu com 2 números.
+            case 2: // Opções de operações com 2 números.
                 printf("\n---Operações com 2 números---\n");
                 printf("\n(1) Soma\n");
                 printf("(2) Subtração\n");
@@ -116,7 +116,7 @@ int main() {
                 printf("(10) Calcular hipotenusa (Teorema de Pitágoras)\n");
                 printf("(11) Calcular cateto (Teorema de Pitágoras)\n");
                 printf("\nEscolha: ");
-                scanf(" %d", &operacao);
+                scanf(" %d", &operacao); // Recebe a escolha da operação.
                 
                 switch (operacao) {
                     case 1:
@@ -233,15 +233,15 @@ int main() {
                         }
                 }
             break;
-            //Submenu 3 números
-            case 3:
+            //Submenu com 3 números.
+            case 3: // Opções de operações com 3 números.
                 printf("\n---Operações com 3 números---\n");
                 printf("\n(1) Média com 3 números\n");
                 printf("(2) Área do trapézio\n");
                 printf("(3) Volume do paralelepípedo\n");
                 printf("(4) Perímetro do triângulo\n");
                 printf("\nEscolha: ");
-                scanf(" %d", &operacao);
+                scanf(" %d", &operacao); // Recebe a escolha da operação.
                 
                 switch (operacao) {
                     case 1:
@@ -306,14 +306,14 @@ int main() {
                             printf("\nO perímetro do triângulo é %.2lf\n", n1 + n2 + n3);
                         }
                         break;
-            case 0:
+            case 0: // Opção para sair do programa.
                 break;
             
-            default:
+            default: // Caso o usuário digite uma opção inválida.
                 printf("\nOpção Inválida!\n");
         }
     } 
-}   while (opcao != 0);
+}   while (opcao != 0); // O loop continuará até que a opção 0 seja digitada, encerrando o programa.
     
 	return 0;
 }
