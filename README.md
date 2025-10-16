@@ -1,9 +1,50 @@
 # Calculadora-Cientifica
 O Programa é uma calculadora científica com 24 operações disponíveis para realizar cálculos, contando com Menu e Submenu onde você decide se utilizará 1, 2 ou 3 números.
-A IDE utilizada foi o GBDonline e a linguagem de programação sendo a C, onde conta também com as bibliotecas <stdio.h> e <math.h>.
-É necessário um compilador C e funciona em sistema operacional Windows. Para "baixar" basta clonar esse repositório.
 
-Exemplo de uso: 
+**Tecnologias**
+
+- IDE: GDBonline
+- Linguagem de programação: C
+- Bibliotecas: <stdio.h> e <math.h>
+
+**Funcionalidades**
+
+As 24 operações da calculadora são:
+- Raiz quadrada
+- Fatorial
+- Valor absoluto
+- Verificar se é par
+- Verificar se é ímpar
+- Conversão de temperatura: Celsius → Fahrenheit
+- Logaritmo em base 10
+- Área do círculo (com base no raio)
+- Volume do cubo (com base na aresta)
+- Soma
+- Subtração
+- Multiplicação
+- Divisão
+- Potência (base e expoente)
+- Cálculo do IMC (peso e altura)
+- Média aritmética
+- Área do retângulo
+- Área do triângulo
+- Cálculo da hipotenusa (Teorema de Pitágoras)
+- Cálculo de cateto faltante (Teorema de Pitágoras)
+- Média aritmética com 3 valores
+- Área do trapézio
+- Volume do paralelepípedo
+- Perímetro do triângulo
+
+**Informações Adicionais**
+
+O programa inclui verificações para:
+- Números negativos em operações inválidas (como raiz quadrada, logaritmo, fatorial, etc.)
+- Divisão por zero
+- Hipotenusa menor ou igual ao cateto
+- Validação de entrada de valores negativos em áreas ou volumes
+ 
+
+**Exemplo**
 
 -----CALCULADORA CIENTÍFICA-----
 
@@ -32,5 +73,5 @@ Digite um número: 25
 
 O resultado é 5.00.
 
-
+*Este código está disponível para uso livre. Fique à vontade para modificá-lo e usá-lo conforme necessário.*
 
